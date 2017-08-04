@@ -11,27 +11,17 @@
 ## Planning
 
 1. Configuration/dependencies
-  * This should include ALL dependencies.
 
-  * Install the following packages:
-
-    * Backend Packages
-      * The following were implemented for use in our Development Environment
-		Microsoft.NETCore.App
-		Microsoft.AspNetCore.Diagnostics Version 1.0.0,
-		Microsoft.AspNetCore.Server.IISIntegration Version 1.0.0,
-		Microsoft.AspNetCore.Server.Kestrel Version 1.0.1,
-		Microsoft.Extensions.Logging.Console Version 1.0.0,
-		Microsoft.AspNetCore.Mvc Version 1.0.0,
-		Microsoft.EntityFrameworkCore Version 1.0.0,
-		Microsoft.EntityFrameworkCore.SqlServer Version 1.0.0,
-		Microsoft.Extensions.Configuration.FileExtensions Version 1.0.0,
-		Microsoft.Extensions.Configuration.Json Version 1.0.0
-
-    * Frontend Packages
-      * The following were implemented in our Production Environment
-        * bootstrap - provides us with some rudimentary page styling tools.
-
+	* Microsoft.NETCore.App
+	* Microsoft.AspNetCore.Diagnostics Version 1.0.0,
+	* Microsoft.AspNetCore.Server.IISIntegration Version 1.0.0,
+	* Microsoft.AspNetCore.Server.Kestrel Version 1.0.1,
+	* Microsoft.Extensions.Logging.Console Version 1.0.0,
+	* Microsoft.AspNetCore.Mvc Version 1.0.0,
+	* Microsoft.EntityFrameworkCore Version 1.0.0,
+	* Microsoft.EntityFrameworkCore.SqlServer Version 1.0.0,
+	* Microsoft.Extensions.Configuration.FileExtensions Version 1.0.0,
+	* Microsoft.Extensions.Configuration.Json Version 1.0.0
 
   2. Specifications
 
@@ -45,12 +35,16 @@
   | User can Delete a Product | click "Delete Product" | This product has been deleted. |
 
 3. Integration
-  * index.cshtml
-  * List.cshtml
-  * Details.cshtml
-  * Add.cshtml
-  * Edit.cshtml
-  * Delete.cshtml
+  * HomeController.cs - for routing and file integration.
+  * Product.cs - Our Product Object Model
+  * GummiBearKingdomContext.cs - for Database Configuration
+  * 20170804200356_Initial.cs - for Database Migration
+  * Index.cshtml - our home page
+  * List.cshtml - a page for listing our products
+  * Details.cshtml - a page for viewing the details of a given product
+  * Add.cshtml - a page for adding a new product
+  * Edit.cshtml - a page for editing an existing product
+  * Delete.cshtml - a page for deleting an existing product
   
 ## Setup/Installation Requirements
 
@@ -58,11 +52,14 @@
 * In your command line, navigate to the desktop or your desired folder destination.
 * Copy the project's github address (https://github.com/drewlinn/GummiBearKingdom.git)
 * Write in your console the command "git clone" and paste the project address afterward and press enter.
-* Use your console to navigate to the project directory.
 * Open the project using Visual Studio.
-* Press the button in the tool bar with the green PLAY SYMBOL that says "IIS EXPRESS" next to it.
+* Right click on the project in the Solution Explorer Pane and click "Build".
+* In the Solution Explorer Pane, look in "Solution 'GummiBearKingdom'/src/GummiBearKingdom/Migrations" for the name of the Database Migration file, which should be "20170804200356_Initial".
+* Use your console to navigate to the "GummiBearKingdom/src/GummiBearKingdom".
+* In the Command Line, type the command "dotnet ef database update " followed by the name of the migration file.
+* Once this process is complete, in Visual Studio, click on the button in the tool bar with the green PLAY SYMBOL that says "IIS EXPRESS" next to it.
 * Your default web browser should be open and navigate to the necessary localhost automatically.
-* The application should successfully be displayed with full functionality.
+* The application should be displayed in your browser with full functionality.
 
 
 ## Known Bugs
