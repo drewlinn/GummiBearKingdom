@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<GummiBearKingdom.Models.Product>
+
 @{
+    ViewData["Title"] = "Product List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Travel Blog</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New Product", "Add")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin)
+        </th>
+      
+        <th></th>
+    </tr>
+
+    @foreach (var pro in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => pro.name) |
+            </td>
+            <td>
+                @Html.DisplayFor(model => pro.cost) |
+            </td>
+            <td>
+                @Html.DisplayFor(model => pro.origin) |
+            </td>       
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = pro.id })
+                @Html.ActionLink("Details", "Details", new { id = pro.id })
+                @Html.ActionLink("Delete", "Delete", new { id = pro.id })
+            </td>
+        </tr>
+
+    }
+</table>
+
+@Html.ActionLink("Return Home", "Index")

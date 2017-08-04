@@ -1,5 +1,23 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GummiBearKingdom.Models.Product
 @{
+    ViewData["Title"] = "Product - Add a New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Add a new Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.cost)
+    @Html.EditorFor(model => model.cost)
+
+    @Html.LabelFor(model => model.origin)
+    @Html.EditorFor(model => model.origin)
+    
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "List")
+@Html.ActionLink("Return Home", "Index")
