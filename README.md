@@ -6,7 +6,7 @@
 
 ## Description
 
-This Web Application is designed 
+	This Web Application is designed for the user to see information about a Candy Store called Gummi Bear Kingdom. They can View a list of their products, view information about an individual product, add a new products, update an existing product, or delete an existing product.
 
 ## Planning
 
@@ -17,6 +17,16 @@ This Web Application is designed
 
     * Backend Packages
       * The following were implemented for use in our Development Environment
+		Microsoft.NETCore.App
+		Microsoft.AspNetCore.Diagnostics Version 1.0.0,
+		Microsoft.AspNetCore.Server.IISIntegration Version 1.0.0,
+		Microsoft.AspNetCore.Server.Kestrel Version 1.0.1,
+		Microsoft.Extensions.Logging.Console Version 1.0.0,
+		Microsoft.AspNetCore.Mvc Version 1.0.0,
+		Microsoft.EntityFrameworkCore Version 1.0.0,
+		Microsoft.EntityFrameworkCore.SqlServer Version 1.0.0,
+		Microsoft.Extensions.Configuration.FileExtensions Version 1.0.0,
+		Microsoft.Extensions.Configuration.Json Version 1.0.0
 
     * Frontend Packages
       * The following were implemented in our Production Environment
@@ -24,26 +34,24 @@ This Web Application is designed
 
 
   2. Specifications
+
   | Behavior | Input | Output |
   | :--------| :---- | :------|
+  | User can view information about Gummi Bear Kingdom | application Start | "Welcome to our Kingdom..." |
+  | User can View a list of all the Products available | click "View Products" | "Gummi Bears, Chocolate, Candy Bars |
+  | User can View the information of an individual Product | click "Gummi Bears" | "Gummi Bears", "$3.99/lb.", "Brazil" |
+  | User can Add a Product | click "Add Product", enter product info | "Gummi Bears", "$3.99/lb.", "Brazil" |
+  | User can Update a Product | click "Update Product", enter new product info | "Gummi Bears", "$2.99/lb.", "Honduras" |
+  | User can Delete a Product | click "Delete Product" | This product has been deleted. |
 
 3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
-
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
-
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
-
+  * index.cshtml
+  * List.cshtml
+  * Details.cshtml
+  * Add.cshtml
+  * Edit.cshtml
+  * Delete.cshtml
+  
 ## Setup/Installation Requirements
 
 * Open your console or powershell command line.
@@ -51,8 +59,7 @@ This Web Application is designed
 * Copy the project's github address (https://github.com/drewlinn/GummiBearKingdom.git)
 * Write in your console the command "git clone" and paste the project address afterward and press enter.
 * Use your console to navigate to the project directory.
-* Open Visual Studio.
-* Open the project in Visual Studio.
+* Open the project using Visual Studio.
 * Press the button in the tool bar with the green PLAY SYMBOL that says "IIS EXPRESS" next to it.
 * Your default web browser should be open and navigate to the necessary localhost automatically.
 * The application should successfully be displayed with full functionality.
@@ -71,6 +78,7 @@ If you notice any bugs in my program or any other issues with my code, please em
 HTML
 CSS
 C#
+Visual Studio 2015
 
 ### License
 
