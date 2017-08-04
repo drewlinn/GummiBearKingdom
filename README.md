@@ -70,7 +70,7 @@
 
 ## Known Bugs
 
-There are no known bugs at this time.
+Buttons in nav bar do not yet work.
 
 ## Support and contact details
 
