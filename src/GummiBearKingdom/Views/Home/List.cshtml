@@ -5,11 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Travel Blog</h2>
+<h2>A List of our Products:</h2>
 <hr />
-<p>
-    @Html.ActionLink("Add New Product", "Add")
-</p>
 <table>
     <tr>
         <th>
@@ -46,5 +43,9 @@
 
     }
 </table>
-
-@Html.ActionLink("Return Home", "Index")
+<p>
+    @Html.ActionLink("Add New Product", "Add")
+</p>
+<p>
+    @Html.ActionLink("Return Home", "Index")
+</p>

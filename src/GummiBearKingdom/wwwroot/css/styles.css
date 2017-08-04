@@ -1,0 +1,20 @@
+﻿
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    text-align: start;
+    font-variant: normal normal;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}

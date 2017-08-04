@@ -1,4 +1,5 @@
 ﻿@model GummiBearKingdom.Models.Product
+
 @{
     ViewData["Title"] = "Product - Add a New";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,16 +9,32 @@
 
 @using (Html.BeginForm())
 {
+<h4>
     @Html.LabelFor(model => model.name)
+</h4>
+<h4>
     @Html.EditorFor(model => model.name)
+</h4>
 
+<h4>
     @Html.LabelFor(model => model.cost)
+</h4>
+<h4>
     @Html.EditorFor(model => model.cost)
+</h4>
 
+<h4>
     @Html.LabelFor(model => model.origin)
+</h4>
+<h4>
     @Html.EditorFor(model => model.origin)
+</h4>
     
     <input type="submit" value="Create" class="btn btn-default" />
 }
-@Html.ActionLink("Back to List", "List")
-@Html.ActionLink("Return Home", "Index")
+<p>
+    @Html.ActionLink("Back to List", "List")
+</p>
+<p>
+    @Html.ActionLink("Return Home", "Index")
+</p>

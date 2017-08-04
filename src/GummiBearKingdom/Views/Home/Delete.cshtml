@@ -7,14 +7,24 @@
 
 <h2>Are you sure you want to delete this product?</h2>
 
- @Html.DisplayFor(model => model.name)
- @Html.DisplayFor(model => model.cost)
- @Html.DisplayFor(model => model.origin)
+ <p>
+     @Html.DisplayFor(model => model.name)
+</p>
+ <p>
+     @Html.DisplayFor(model => model.cost)
+</p>
+ <p>
+     @Html.DisplayFor(model => model.origin)
+</p>
 
 @using (Html.BeginForm())
 {
     <input type="submit" value="Delete" />
 }
 
-@Html.ActionLink("Back to home", "List")
-@Html.ActionLink("Return Home", "Index")
+<p>
+    @Html.ActionLink("Back to home", "List")
+</p>
+<p>
+    @Html.ActionLink("Return Home", "Index")
+</p>

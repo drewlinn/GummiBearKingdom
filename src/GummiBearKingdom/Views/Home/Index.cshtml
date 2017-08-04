@@ -1,9 +1,10 @@
-﻿
-@{
-    ViewData["Title"] = "Welcome!";
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
-<h2>@ViewData["Title"].</h2>
+<h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Welcome to our website!</p>
-@Html.ActionLink("View a list of our products", "List")
+<h4>Welcome to our website!</h4>
+<p>@Html.ActionLink("View a list of our products", "List")</p>

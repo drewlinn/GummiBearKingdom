@@ -1,5 +1,5 @@
-﻿
-@model GummiBearKingdom.Models.Product
+﻿@model GummiBearKingdom.Models.Product
+
 @{
     ViewData["Title"] = "Product - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,19 +10,37 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.id)
+    <p>
+        @Html.HiddenFor(model => model.id)
+    </p>
 
-    @Html.LabelFor(model => model.name)
-    @Html.EditorFor(model => model.name)
+    <p>
+        @Html.LabelFor(model => model.name)
+    </p>
+    <p>
+        @Html.EditorFor(model => model.name)
+    </p>
 
-    @Html.LabelFor(model => model.cost)
-    @Html.EditorFor(model => model.cost)
+    <p>
+        @Html.LabelFor(model => model.cost)
+    </p>
+    <p>
+        @Html.EditorFor(model => model.cost)
+    </p>
 
-    @Html.LabelFor(model => model.origin)
-    @Html.EditorFor(model => model.origin)
+    <p>
+        @Html.LabelFor(model => model.origin)
+    </p>
+    <p>
+        @Html.EditorFor(model => model.origin)
+    </p>
 
     <input type="submit" value="Save" class="btn btn-default" />
 }
 
-@Html.ActionLink("Back to List", "List")
-@Html.ActionLink("Return Home", "Index")
+<p>
+    @Html.ActionLink("Back to List", "List")
+</p>
+<p>
+    @Html.ActionLink("Return Home", "Index")
+</p>

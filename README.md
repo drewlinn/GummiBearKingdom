@@ -12,6 +12,7 @@
 
 1. Configuration/dependencies
 
+	For our Development Environment and Backend Functionality:
 	* Microsoft.NETCore.App
 	* Microsoft.AspNetCore.Diagnostics Version 1.0.0,
 	* Microsoft.AspNetCore.Server.IISIntegration Version 1.0.0,
@@ -22,6 +23,12 @@
 	* Microsoft.EntityFrameworkCore.SqlServer Version 1.0.0,
 	* Microsoft.Extensions.Configuration.FileExtensions Version 1.0.0,
 	* Microsoft.Extensions.Configuration.Json Version 1.0.0
+	
+	For our Production Environment and Frontend Interface:
+	* jQuery - as a dependency for bootstrap
+	* npm - for installing bootstrap
+	* gulp - for compiling bootstrap styles
+	* Bootstrap - for basic styles
 
   2. Specifications
 
@@ -54,11 +61,10 @@
 * Write in your console the command "git clone" and paste the project address afterward and press enter.
 * Open the project using Visual Studio.
 * Right click on the project in the Solution Explorer Pane and click "Build".
-* In the Solution Explorer Pane, look in "Solution 'GummiBearKingdom'/src/GummiBearKingdom/Migrations" for the name of the Database Migration file, which should be "20170804200356_Initial".
 * Use your console to navigate to the "GummiBearKingdom/src/GummiBearKingdom".
-* In the Command Line, type the command "dotnet ef database update " followed by the name of the migration file.
+* In the Command Line, type the command "dotnet ef database update".
 * Once this process is complete, in Visual Studio, click on the button in the tool bar with the green PLAY SYMBOL that says "IIS EXPRESS" next to it.
-* Your default web browser should be open and navigate to the necessary localhost automatically.
+* Your default web browser should open and navigate to the designated localhost automatically.
 * The application should be displayed in your browser with full functionality.
 
 
